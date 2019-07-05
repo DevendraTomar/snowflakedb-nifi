@@ -27,7 +27,10 @@ CREATE OR REPLACE STAGE "demo"."tweets".STAGE_S3 URL = 's3://sample/testdata/' C
 copy into demo.tweets.userdata from @STAGE_S3; <br/><br/>
 //As soon as this command is run , the snowflake stage will pick all the delta (json files) from s3 and ingest the same into Snowflake.<br/>
 
-4. Now what we need to do it to orchestrate the same with NiFi and we are done.<br/>
+4. Now what we need to do it to orchestrate the same with NiFi and we are done.<br/><br/>
 
 
+<b>NiFi Flow:</b> <br/>
+<br/>
+![](nifi.png)
 
